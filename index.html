@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wendy Chan Website</title>
+  <link rel="shortcut icon" href="/img/logo.svg" type="image/x-icon">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#home"><img src="/img/logo.svg" alt="Wendy Chan Website" class="header-icon"></a>
+    <button class="menu-btn">
+      <span class="bar1"></span>
+      <span class="bar2"></span>
+      <span class="bar3"></span>
+    </button>
+    <nav>
+      <ul class="header-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="hero-desc">哈囉</span>
+          <h1 class="hero-title">我是 Wendy</h1>
+          <h2 class="hero-subtitle">Website Developer</h2>
+          <a href="#about" class="btn-primary">關於我</a>
+        </div>
+        <div class="hero-pic">
+          <img src="/img/me.png" alt="author - Wendy">
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container about-container">
+        <div class="about-pic">
+          <img src="/img/me.png" alt="author - Wendy">
+        </div>
+        <h3 class="section-heading">關於我</h3>
+        <div class="about-section">
+          <p>
+            嗨，我是詹舒涵(Wendy)，我畢業於國立交通⼤學⽣物資訊及系統⽣物研究所。專長是網⾴的前/後端開發，擁有約 7 ~ 8 年的相關經驗。念書時期在中國醫資訊室和⼯研院資通所擔任實習⽣，畢業後曾經任職於⼯研院資通所的軟體⼯程師，現在是鴻海的軟體⼯程師。
+          </p>
+          <div class="about-skill">
+            <span>我擅長的：</span>
+            <ul class="about-skill-list">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>AJAX</li>
+              <li>Bootstrap</li>
+              <li>Vue3</li>
+              <li>React</li>
+              <li>Angular</li>
+              <li>GIT</li>
+              <li>PHP</li>
+              <li>Python</li>
+              <li>Go</li>
+              <li>MySQL</li>
+              <li>PostgreSQL</li>
+              <li>Linux</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="project">
+      <div class="container">
+        <h3 class="section-heading">作品集</h3>
+        <!-- Project 1 -->
+        <article class="project">
+          <div class="project-image">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/L_L1QrQ08uE?si=T7gKs_prq3wZCfqM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="project-content">
+            <h4 class="project-heading">作品一</h4>
+            <p class="project-desc">
+              使⽤這個網站可以 access 所有資源的狀態和資訊，包含 compute, storage, 和 networking，可以讓使⽤者⼀⽬瞭然的監控資源，執⾏⾼級資源管理，並查看系統記錄，以便在任何警告事件發⽣前，輕鬆發現故障。
+              使⽤技術: Vue3, CSS3, Go, PostgreSQL, Linux, Git, Docker
+            </p>
+            <!-- <a href="#" class="btn-primary btn-project">Demo</a> -->
+          </div>
+        </article>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <h3 class="section-heading">聯絡我</h3>
+        <span class="contact-desc">
+          歡迎您隨時與我聯絡，我的 email: puppy0915han@gmail.com，或點下方按鈕寄信給我。
+        </span>
+        <a href="mailto:puppy0915han@gmail.com" class="btn-primary btn-contact">寄信給我</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-sign">
+        <p>Design by Wendy Chan, 2025</p>
+      </div>
+    </div>
+  </footer>
+  <a href="#home" id="top"><img src="/img/up.svg" alt="go to top"></a>
+  <script defer>
+    const btn = document.querySelector(".menu-btn")
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("clicked")
+    })
+
+    const nav = document.querySelector("nav")
+    nav.addEventListener("click", (e) => {
+      if (e.target.tagName === "A") {
+        btn.classList.remove("clicked")
+      }
+    })
+
+    const topBn = document.querySelector("#top")
+    document.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        topBn.classList.remove("hide")
+      } else {
+        topBn.classList.add("hide")
+      }
+    })
+  </script>
+</body>
+</html>
